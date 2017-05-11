@@ -1,21 +1,29 @@
-$(window).load(function(){
+$(document).ready(function(){
     init();
 });
 
 
 function init(){
-    var toolTimeline = new TimelineMax();
+    var toolTimeline = new TimelineLite({paused: true});
     var duration = .5;
-    toolTimeline.from('.mainTitle', duration, {opacity: 0, scale:25, ease:Linear.easeInOut});
+    toolTimeline.add(TweenLite.to('#toolBox', duration, {y:-100, ease:Linear.easeInOut}));
+    toolTimeline.add(TweenLite.to('#weightLifter', duration, {y:-100, ease:Bounce.easeInOut}));
+    toolTimeline.add(TweenLite.to('#crazy', duration, {y:-100, ease:Elastic.easeInOut}));
+    toolTimeline.add(TweenLite.to('#leaf', duration, {y:-100, ease:Back.easeInOut}));
 
-    toolTimeline.from('.title', duration, {opacity: 0, scale:25, ease:Linear.easeInOut},.2);
+    $("#start").click(function(){
+        toolTimeline.play();
+    });
 
-    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeOut});
+    $("#pause").click(function(){
+        toolTimeline.pause();
+    });
 
-    toolTimeline.from('.superman img', duration, {skewX: "20deg", ease:Back.easeOut},.9);
+    $("#stop").click(function(){
+        toolTimeline.stop();
+    });
 
-    toolTimeline.to('.mainTitle', duration, {right: -50, ease:Back.easeInOut},.7);
-
-    toolTimeline.staggerTo('.tool', duration, {top: 150, ease:Back.easeInOut},.2, .7);
-
+    $("#reverse").click(function(){
+        toolTimeline.reverse();
+    });
 }
