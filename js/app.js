@@ -27,4 +27,3 @@ function init(){
         toolTimeline.reverse();
     });
 }
-
