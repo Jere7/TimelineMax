@@ -11,9 +11,9 @@ function init(){
     var duration = .5;
 
     toolTimeline.from('.mainTitle', duration, {opacity: 1,scale:25, ease:Linear.easeInOut});
-    toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Bounce.easeInOut});
-    // toolTimeline.to('#crazy', duration, {y:-100, ease:Elastic.easeInOut});
-    // toolTimeline.to('#leaf', duration, {y:-100, ease:Back.easeInOut});
+    toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
+    toolTimeline.from('#toolBox', duration, {opacity: 0,scale:5, ease:Linear.easeInOut});
+    toolTimeline.from('#leaf', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
 
     // $("#start").click(function(){
     //     toolTimeline.play();
