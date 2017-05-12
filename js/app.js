@@ -11,19 +11,19 @@ function init(){
     toolTimeline.to('#crazy', duration, {y:-100, ease:Elastic.easeInOut});
     toolTimeline.to('#leaf', duration, {y:-100, ease:Back.easeInOut});
 
-    // $("#start").click(function(){
-    //     toolTimeline.play();
-    // });
+    $("#start").click(function(){
+        toolTimeline.play();
+    });
 
-    // $("#pause").click(function(){
-    //     toolTimeline.pause();
-    // });
+    $("#pause").click(function(){
+        toolTimeline.pause();
+    });
 
-    // $("#stop").click(function(){
-    //     toolTimeline.stop();
-    // });
+    $("#stop").click(function(){
+        toolTimeline.stop();
+    });
 
-    // $("#reverse").click(function(){
-    //     toolTimeline.reverse();
-    // });
-}
+    $("#reverse").click(function(){
+        toolTimeline.reverse();
+    });
+}   
