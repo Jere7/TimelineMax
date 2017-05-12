@@ -25,9 +25,9 @@ body {
     transform-style: preserve-3d;
     color: #ffffff;
     font-family: ASAP;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
-
+/*
 .controlButtons {
     position: absolute;
     left: 20px;
@@ -50,7 +50,7 @@ body {
 .controlButtons button:focus{
     outline: 0;
 }
-
+*/
 
 .content-holder {
     position: relative;
