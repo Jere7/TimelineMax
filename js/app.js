@@ -14,6 +14,9 @@ function init(){
     toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
     toolTimeline.from('#toolBox', duration, {opacity: 0,scale:5, ease:Linear.easeInOut});
     toolTimeline.from('#leaf', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
+    toolTimeline.from('#weightLifter', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
+    toolTimeline.from('#crazy', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
+    toolTimeline.from('#supermeme', duration, {opacity: 0,scale:25, ease:Linear.easeInOut});
 
     // $("#start").click(function(){
     //     toolTimeline.play();
