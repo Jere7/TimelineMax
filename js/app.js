@@ -12,11 +12,19 @@ function init(){
 
     toolTimeline.from('.mainTitle', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},1.5);
     toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Linear.easeInOut} ,1.5);
-    toolTimeline.from('#toolBox', duration, {opacity: 0,scale:5, ease:Linear.easeInOut}, .5);
-    toolTimeline.from('#leaf', duration, {opacity: 0,scale:25, ease:Linear.easeInOut}, .5);
-    toolTimeline.from('#weightLifter', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},.5);
-    toolTimeline.from('#crazy', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},.5);
-    toolTimeline.from('#supermeme', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},1);
+     toolTimeline.from('.superman img', duration, {left: 0, ease:Linear.easeInOut});
+
+
+
+
+
+
+    // toolTimeline.from('#toolBox', duration, {opacity: 0,scale:5, ease:Linear.easeInOut}, .5);
+    // toolTimeline.from('#leaf', duration, {opacity: 0,scale:25, ease:Linear.easeInOut}, .5);
+    // toolTimeline.from('#weightLifter', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},.5);
+    // toolTimeline.from('#crazy', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},.5);
+    // toolTimeline.from('#supermeme', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},1);
+
 
     // $("#start").click(function(){
     //     toolTimeline.play();
