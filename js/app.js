@@ -31,6 +31,8 @@ function init(){
     toolTimeline.from('#crazy', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},1);
     toolTimeline.from('#supermeme', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},.7);
 
+   
+
     // Jquery selector to buttons class.controlButtons
 
     // $("#start").click(function(){
@@ -48,4 +50,39 @@ function init(){
     // $("#reverse").click(function(){
     //     toolTimeline.reverse();
     // });
-}   
+}  
+
+$(document).ready(function(){
+    startTween();
+});
+
+function startTween(){
+    var d= 1
+
+         TweenLite.to($("#toolBox"), 1.5, {delay: d, x: 10, y: 0, scale: 1.5,
+              onComplete: returnToNormal, onCompleteParams: [$("#toolBox")]});  
+
+         TweenLite.to($("#weightLifter"), 1.5, {delay: d, x: 10, y: 0, scale: 1.5,
+              onComplete: returnToNormal, onCompleteParams: [$("#weightLifter")]});        
+            
+         TweenLite.to($("#crazy"), 1.5, {delay: d, x: 10, y: 0, scale: 1.5,
+              onComplete: returnToNormal, onCompleteParams: [$("#crazy")]});        
+
+         TweenLite.to($("#leaf"), 1.5, {delay: d, x: 10, y: 0, scale: 1.5,
+              onComplete: returnToNormal, onCompleteParams: [$("#leaf")]});            
+
+         
+}
+
+function returnToNormal(obj) {
+    if(obj){
+         TweenLite.to(obj, 1.5, {x: 300, y: 100  , scale: 1.9 });       
+    }
+            
+}
+
+function returnTextToNormal() {
+         TweenLite.to(".title", 1.5, {x: 0, y: 70, color: "blue", fontSize: "+90" });
+         TweenLite.to(".greenText", 1.5, {x: 600, y: 0, color: "red", fontSize: "+90" });
+         TweenLite.to(".asapReg", 1.5, {x: 600, y: 0, color: "green", fontSize: "+90" });
+}  
