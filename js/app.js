@@ -12,8 +12,8 @@ function init(){
 
     toolTimeline.from('.mainTitle', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},1.5);
     toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Linear.easeInOut} ,1.5);
-    toolTimeline.from('.superman img', duration, {left: 50, ease:Linear.easeInOut});
-   
+    toolTimeline.to('.superman img', duration, {left: 0, ease:Linear.easeInOut});
+    toolTimeline.to('.mainTitle', duration, {right: -50, ease:Linear.easeInOut});
 
 
     toolTimeline.from('#toolBox', duration, {opacity: 0,scale:5, ease:Linear.easeInOut}, .5);
