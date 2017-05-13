@@ -16,20 +16,20 @@ function init(){
     // Sequence TimelineMax.from(ease:Linear.easeInOut)
     // 
     toolTimeline.from('.mainTitle', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},1.5);
-    toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Linear.easeInOut} ,1.5);
+    toolTimeline.from('.title', duration, {opacity: 0,scale:25, ease:Linear.easeInOut} ,1.1);
     
     // Sequence TimelineMax.to left:0-right:-50 (ease:Back.easeInOut)
 
-    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeInOut});
+    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeInOut}, 2);
     toolTimeline.to('.mainTitle', duration, {right: -50, ease:Back.easeInOut}, .7);
 
     // Sequence TimelineMax.from
                  
-    toolTimeline.from('#toolBox', duration, {opacity: 0,scale:5, ease:Linear.easeInOut}, 1);
-    toolTimeline.from('#leaf', duration, {opacity: 0,scale:25, ease:Linear.easeInOut}, .5);
-    toolTimeline.from('#weightLifter', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},.5);
-    toolTimeline.from('#crazy', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},1);
-    toolTimeline.from('#supermeme', duration, {opacity: 0,scale:25, ease:Linear.easeInOut},.7);
+    toolTimeline.from('#toolBox', duration, {opacity: 0,scale: 5, ease:Linear.easeInOut}, 1);
+    toolTimeline.from('#leaf', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut}, .5);
+    toolTimeline.from('#weightLifter', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},.5);
+    toolTimeline.from('#crazy', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},1);
+    toolTimeline.from('#supermeme', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},.7);
 
     // Jquery selector to buttons class.controlButtons
 
