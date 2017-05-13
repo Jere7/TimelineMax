@@ -20,7 +20,7 @@ function init(){
     
     // Sequence TimelineMax.to left:0-right:-50 (ease:Back.easeInOut)
 
-    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeInOut}, 1.7);
+    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeInOut}, 1.9);
     toolTimeline.to('.mainTitle', duration, {right: -50, ease:Back.easeInOut}, 2);
 
     // Sequence TimelineMax.from
