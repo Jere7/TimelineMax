@@ -61,10 +61,6 @@ function startTween(){
          TweenLite.to($("#toolBox"), 1, {delay: d, x: -400, y: 0, scale: 2,
               onComplete: returnToNormal, onCompleteParams: [$("#toolBox")]});  
 
-         TweenLite.to(".title", 1, {x: 0, y: 0, color: "blue", fontSize: "+90" });
-         TweenLite.to(".asapReg", 1, {x: 600, y: 0, color: "green", fontSize: "+90" });
-         TweenLite.to(".greenText", 1, {x: 600, y: 0, color: "red", fontSize: "+90" });   
-
          TweenLite.to($("#weightLifter"), 1, {delay: d, x: -200, y: 0, scale: 2,
               onComplete: returnToNormal, onCompleteParams: [$("#weightLifter")]});     
             
@@ -73,24 +69,27 @@ function startTween(){
 
          TweenLite.to($("#leaf"), 1, {delay: d, x: 100, y: 0, scale: 2,
               onComplete: returnToNormal, onCompleteParams: [$("#leaf")]});            
-             
-         TweenLite.to($(".gsapTitle"), 1, {delay: d + 3, x: 0, y: 0, scale: 2.5,
-              onComplete: returnTextNormal, onCompleteParams: [$(".gsapTitle")]});    
               
-         TweenLite.to($(".title"), 1, {delay: d + 3, x: 0, y: 0, scale: 2.5,
-              onComplete: returnTextNormal, onCompleteParams: [$(".title")]});      
+     
+         TweenLite.to(".title", .5, {delay: d + 5,color: "blue", fontSize: "+=20"
+         ,onComplete:returnTextToNormal, onCompleteParams: [d] });
+         TweenLite.to(".asapReg", .5, {delay: d + 5,color: "green", fontSize: "+=20"
+         ,onComplete:returnTextToNormal, onCompleteParams: [d] });
+         TweenLite.to(".greenText", .5, {delay: d + 5,color: "red", fontSize: "+=20"
+         ,onComplete:returnTextToNormal, onCompleteParams: [d] });   
+
 }
 
 function returnToNormal(obj) {    
     if(obj){
-         TweenLite.to(obj, 1.5, {x: 200, y: 290  , scale: 1.5 });       
+         TweenLite.to(obj, 1.5, {x: 90, y: 290  , scale: 1.5 });       
     }
             
 }
 
-function returnTextToNormal() {
-        //   TweenLite.to($(".title"), 1, {x: 0, y: 0, color: "blue", fontSize: "+90" });
-        //   TweenLite.to($(".gsapTitle"), 1, {x: 600, y: 0, color: "red", fontSize: "+90" });
-        //   TweenLite.to(".asapReg", 1, {x: 600, y: 0, color: "green", fontSize: "+90" });
+function returnTextToNormal(delay) {
+          TweenLite.to(".title", 2.5, {delay: delay, color: "blue", fontSize: "0" });
+          TweenLite.to(".gsapTitle", 2.5, {delay: delay, color: "red", fontSize: "0" });
+          TweenLite.to(".asapReg", 2.5, {delay: delay, color: "green", fontSize: "0" });
          
 }  
