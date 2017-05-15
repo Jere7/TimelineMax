@@ -71,11 +71,11 @@ function startTween(){
               onComplete: returnToNormal, onCompleteParams: [$("#leaf")]});            
               
      
-         TweenLite.to(".title", .5, {delay: d + 5,color: "blue", fontSize: "+=20"
+         TweenLite.to(".title", .5, {delay: d + 3.2,color: "white", fontSize: "+=20"
          ,onComplete:returnTextToNormal, onCompleteParams: [d] });
-         TweenLite.to(".asapReg", .5, {delay: d + 5,color: "green", fontSize: "+=20"
+         TweenLite.to(".asapReg", .5, {delay: d + 3.2,color: "blue", fontSize: "+=20"
          ,onComplete:returnTextToNormal, onCompleteParams: [d] });
-         TweenLite.to(".greenText", .5, {delay: d + 5,color: "red", fontSize: "+=20"
+         TweenLite.to(".greenText", .5, {delay: d + 3.2,color: "green", fontSize: "+=20"
          ,onComplete:returnTextToNormal, onCompleteParams: [d] });   
 
 }
@@ -89,7 +89,7 @@ function returnToNormal(obj) {
 
 function returnTextToNormal(delay) {
           TweenLite.to(".title", 2.5, {delay: delay, color: "blue", fontSize: "+=10" });
-          TweenLite.to(".gsapTitle", 2.5, {delay: delay, color: "red", fontSize: "+=20" });
-          TweenLite.to(".asapReg", 2.5, {delay: delay, color: "green", fontSize: "+=20" });
+          TweenLite.to(".gsapTitle", 2.5, {delay: delay, color: "green", fontSize: "+=20" });
+          TweenLite.to(".asapReg", 2.5, {delay: delay, color: "red", fontSize: "+=20" });
          
 }  
