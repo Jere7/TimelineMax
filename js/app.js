@@ -88,8 +88,8 @@ function returnToNormal(obj) {
 }
 
 function returnTextToNormal(delay) {
-          TweenLite.to(".title", 2.5, {delay: delay, color: "blue", fontSize: "0" });
-          TweenLite.to(".gsapTitle", 2.5, {delay: delay, color: "red", fontSize: "0" });
-          TweenLite.to(".asapReg", 2.5, {delay: delay, color: "green", fontSize: "0" });
+          TweenLite.to(".title", 2.5, {delay: delay, color: "blue", fontSize: "+=10" });
+          TweenLite.to(".gsapTitle", 2.5, {delay: delay, color: "red", fontSize: "+=20" });
+          TweenLite.to(".asapReg", 2.5, {delay: delay, color: "green", fontSize: "+=20" });
          
 }  
