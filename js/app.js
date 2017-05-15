@@ -20,7 +20,7 @@ function init(){
     
     // Sequence TimelineMax.to left:0-right:-50 (ease:Back.easeInOut)
 
-    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeInOut}, 1.9);
+    toolTimeline.to('.superman img', duration, {left: 0, ease:Back.easeInOut});
     toolTimeline.to('.mainTitle', duration, {right: -50, ease:Back.easeInOut}, 2);
 
     // Sequence TimelineMax.from
@@ -52,7 +52,7 @@ function init(){
     // });
 }  
 
-$(document).ready(function(){
+$(window).on('load', function(){
     startTween();
 });
 
@@ -70,7 +70,9 @@ function startTween(){
 
          TweenLite.to($("#leaf"), 1.5, {delay: d, x: 10, y: 0, scale: 1.5,
               onComplete: returnToNormal, onCompleteParams: [$("#leaf")]});            
-
+        
+         TweenLite.to($(".mainTitle"), 2, {delay: d, x: 10, y: 0, scale: 1.5,
+              onComplete: returnToNormal, onCompleteParams: [$("#leaf")]});                       
          
 }
 
@@ -85,4 +87,5 @@ function returnTextToNormal() {
          TweenLite.to(".title", 1.5, {x: 0, y: 70, color: "blue", fontSize: "+90" });
          TweenLite.to(".greenText", 1.5, {x: 600, y: 0, color: "red", fontSize: "+90" });
          TweenLite.to(".asapReg", 1.5, {x: 600, y: 0, color: "green", fontSize: "+90" });
+        
 }  
