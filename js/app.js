@@ -82,7 +82,7 @@ function startTween(){
 
 function returnToNormal(obj) {    
     if(obj){
-         TweenLite.to(obj, 1.5, {x: 90, y: 290  , scale: 1.5 });       
+         TweenLite.to(obj, 1.5, {x: 100, y: 290  , scale: 1.5 });       
     }
             
 }
