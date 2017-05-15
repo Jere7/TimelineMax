@@ -24,10 +24,10 @@ function init(){
     toolTimeline.to('.mainTitle', duration, {right: -50, ease:Back.easeInOut}, 2);    
     // Sequence TimelineMax.from
                  
-    toolTimeline.from('#toolBox', duration, {opacity: 0,scale: 5, ease:Linear.easeInOut}, .5);
-    toolTimeline.from('#leaf', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut}, .5);
-    toolTimeline.from('#weightLifter', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},.5);
-    toolTimeline.from('#crazy', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},.5);
+    toolTimeline.from('#toolBox', duration, {opacity: 0,scale: 5, ease:Linear.easeInOut});
+    toolTimeline.from('#leaf', duration, {opacity: 0,scale: 5, ease:Linear.easeInOut});
+    toolTimeline.from('#weightLifter', duration, {opacity: 0,scale: 5, ease:Linear.easeInOut});
+    toolTimeline.from('#crazy', duration, {opacity: 0,scale: 5, ease:Linear.easeInOut});
     toolTimeline.from('#supermeme', duration, {opacity: 0,scale: 25, ease:Linear.easeInOut},.5);
 
    
@@ -58,22 +58,26 @@ $(window).on('load', function(){
 function startTween(){
     var d= 1
 
-         TweenLite.to($("#toolBox"), 2, {delay: d, x: -400, y: -30, scale: 3.5,
+         TweenLite.to($("#toolBox"), 1, {delay: d, x: -400, y: 0, scale: 2,
               onComplete: returnToNormal, onCompleteParams: [$("#toolBox")]});  
 
-         TweenLite.to($("#weightLifter"), 2, {delay: d, x: -200, y: -30, scale: 3.5,
-              onComplete: returnToNormal, onCompleteParams: [$("#weightLifter")]});        
+         TweenLite.to(".title", 1, {x: 0, y: 0, color: "blue", fontSize: "+90" });
+         TweenLite.to(".asapReg", 1, {x: 600, y: 0, color: "green", fontSize: "+90" });
+         TweenLite.to(".greenText", 1, {x: 600, y: 0, color: "red", fontSize: "+90" });   
+
+         TweenLite.to($("#weightLifter"), 1, {delay: d, x: -200, y: 0, scale: 2,
+              onComplete: returnToNormal, onCompleteParams: [$("#weightLifter")]});     
             
-         TweenLite.to($("#crazy"), 2, {delay: d, x: 0, y: -30, scale: 3.5,
+         TweenLite.to($("#crazy"), 1, {delay: d, x: 0, y: 0, scale: 2,
               onComplete: returnToNormal, onCompleteParams: [$("#crazy")]});        
 
-         TweenLite.to($("#leaf"), 2, {delay: d, x: 100, y: -30, scale: 3.5,
+         TweenLite.to($("#leaf"), 1, {delay: d, x: 100, y: 0, scale: 2,
               onComplete: returnToNormal, onCompleteParams: [$("#leaf")]});            
              
          TweenLite.to($(".gsapTitle"), 1, {delay: d + 3, x: 0, y: 0, scale: 2.5,
               onComplete: returnTextNormal, onCompleteParams: [$(".gsapTitle")]});    
               
-          TweenLite.to($(".title"), 1, {delay: d + 3, x: 0, y: 0, scale: 2.5,
+         TweenLite.to($(".title"), 1, {delay: d + 3, x: 0, y: 0, scale: 2.5,
               onComplete: returnTextNormal, onCompleteParams: [$(".title")]});      
 }
 
@@ -85,8 +89,8 @@ function returnToNormal(obj) {
 }
 
 function returnTextToNormal() {
-         TweenLite.to(".title", 1, {x: 0, y: 0, color: "blue", fontSize: "+90" });
-         TweenLite.to(".greenText", 1, {x: 600, y: 0, color: "red", fontSize: "+90" });
-         TweenLite.to(".asapReg", 1, {x: 600, y: 0, color: "green", fontSize: "+90" });
+        //   TweenLite.to($(".title"), 1, {x: 0, y: 0, color: "blue", fontSize: "+90" });
+        //   TweenLite.to($(".gsapTitle"), 1, {x: 600, y: 0, color: "red", fontSize: "+90" });
+        //   TweenLite.to(".asapReg", 1, {x: 600, y: 0, color: "green", fontSize: "+90" });
          
 }  
